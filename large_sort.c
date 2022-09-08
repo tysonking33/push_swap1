@@ -95,14 +95,14 @@ void big_sort(char *unsorted_arrayA, char *unsorted_arrayB, int array_sizeA, int
 				i++;
 			}
 			if (i > 2){
-				for (int ctr = 0; ctr < i+2; ctr++){
-					unsorted_arrayA = revrotateA(unsorted_arrayA, array_sizeA);
+				for (int ctr = i; ctr <= 5; ctr++){
+					unsorted_arrayA = rotateA(unsorted_arrayA, array_sizeA);
 					print_arrayAB(unsorted_arrayA, array_sizeA, "3a) unsorted_arrayA", unsorted_arrayB, array_sizeB, "3a) arrayB");
 				}
 			}
-			else if (i<= 2){
-				for (int ctr1 = 0; ctr1 < i; ctr1++){
-					unsorted_arrayA = rotateA(unsorted_arrayA, array_sizeA);
+			else if (i <= 2){
+				for (int ctr1 = i; ctr1 >= 0; ctr1--){
+					unsorted_arrayA = revrotateA(unsorted_arrayA, array_sizeA);
 					print_arrayAB(unsorted_arrayA, array_sizeA, "3b) unsorted_arrayA", unsorted_arrayB, array_sizeB, "3b) arrayB");
 				}
 			}	
