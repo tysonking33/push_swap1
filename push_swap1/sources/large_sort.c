@@ -112,11 +112,13 @@ void	large_sort(t_arrays *array)
 		while (array->a[array->a_size] != array->bubble_sort_arr[bb_loc])
 			bb_loc++;
 		//find position of the element, in array a
-		int ele_loc = 0;
-		while (array->a[ele_loc] != array->bubble_sort_arr[bb_loc])
+		//int ele_loc = 0;
+		/*while (array->a[ele_loc] != array->bubble_sort_arr[bb_loc])
 			ele_loc++;
-		printf("bb_loc: %d, ele_loc: %d\n", bb_loc, ele_loc);
-		if ((array->a[array->a_size] > array->a[0]) && (bb_loc > (3*array->a_size / 4)))
+		printf("bb_loc: %d, ele_loc: %d\n", bb_loc, ele_loc);*/
+		if ((array->a[array->a_size] >= array->bubble_sort_arr[3*array_a_size/4]) && (array->a[array->a_size - 1] == array->bubble_sort_arr[0]))
+			rotatea(array);
+		else if ((array->a[array->a_size] > array->a[0]) && (bb_loc > (3*array->a_size / 4)))
 			rotatea(array);
 		else 
 			pb(array);
